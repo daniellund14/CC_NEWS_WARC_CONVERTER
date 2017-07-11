@@ -44,10 +44,11 @@ function writing_paths_file ()
     echo 'Refreshing common crawl news paths'
     echo "Refresh Date: $RIGHT_NOW"
     echo "Refreshed by: $USER"
+    directory="s3://commoncrawl/crawl-data/CC-NEWS/$YEAR/$MONTH/"
     aws s3 ls --recursive "s3://commoncrawl/crawl-data/CC-NEWS/$YEAR/$MONTH/"
     while read -r line ; do
         extract_filepath $line >> $PATHS_FILE
-    done < <(aws s3 ls --recursive s3://commoncrawl/crawl-data/CC-NEWS/$YEAR/$MONTH/)
+    done < <(aws s3 ls --recursive $directory)
 }
 
 function main()
