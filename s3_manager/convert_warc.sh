@@ -18,7 +18,7 @@ function convert ()
     START=$(date +"%m-%d-%Y:%T")
     echo "Converting $filepath to wat and wet files at $NOW" >> converter_logs
     echo $(date +"%m-%d-%Y:%T") >> converter_logs
-#    java -jar $CONVERTER_JAR WEATGenerator $TMP_PATH $filepath > /dev/null 2>&1
+    java -jar $CONVERTER_JAR WEATGenerator $TMP_PATH $filepath > /dev/null 2>&1
     END=$(date +"%m-%d-%Y:%T")
 
     echo "$START,$END,$filepath" >> converted_files
