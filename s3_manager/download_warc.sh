@@ -13,7 +13,7 @@ while read -r line ; do
    name=$( extract_filename $line )
    path="$FILEPATH$name"
    aws s3 cp $aws_filepath $path
-   echo $path >> log/downloaded_paths
+   echo $path >> downloaded_paths
 
 done < <(cat $1)
 
