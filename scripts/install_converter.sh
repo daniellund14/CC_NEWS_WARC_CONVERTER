@@ -1,5 +1,6 @@
+#!/usr/bin/env bash
+
 aws configure
 bash install_mvn.sh
 sudo yum install git
-bash install_wat_wet_extractor.sh 
-
+bash install_wat_wet_extractor.sh
