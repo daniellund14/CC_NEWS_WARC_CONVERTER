@@ -9,4 +9,5 @@ mv ia-web-commons $HOME
 git clone https://github.com/commoncrawl/ia-hadoop-tools 
 cd ia-hadoop-tools 
 mvn package
+cd -
 mv ia-hadoop-tools $HOME
